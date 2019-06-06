@@ -1,0 +1,151 @@
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #FAFCFC;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 640px;
+}
+
+.tab {
+  &__list {
+    display: flex;
+    margin-bottom: 32px;
+  }
+
+  &__item {
+    cursor: pointer;
+    position: relative;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(91, 189, 229, 0.2);
+    color: #333;
+    flex: 1;
+    font-size: 16px;
+    font-weight: 700;
+    height: 60px;
+    line-height: 60px;
+    letter-spacing: 1.1px;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+}
+
+.content {
+  &__list {
+    position: relative;
+  }
+
+  &__item {
+    background: #fff;
+    box-shadow: 0 0 15px rgba(91, 189, 229, 0.2);
+    transition: all .5s;
+    margin: 0 auto;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 640px;
+    height: 800px;
+    overflow: hidden;
+
+    &:nth-child(2) {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &:nth-child(3) {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__area {
+    padding: 40px;
+  }
+
+  &__ruby {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  &__name {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    font-family: "Sawarabi Mincho";
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 1.2px;
+    text-align: justify;
+  }
+
+  &__img {
+    position: relative;
+    left: -640px;
+    transition: all .5s ease-in-out;
+    border: 12px solid #CDEBF7;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 0 0;
+    margin-bottom: 80px;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.active {
+  background: linear-gradient(#5bbee5 0%, #52ddae);
+  color: #fff;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-top: 15px solid #52ddae ;
+  }
+}
+
+.show {
+  opacity: 1;
+}
+
+.move {
+  left: 0;
+}
+
+@keyframes moveCircle {
+  0% {
+    width: 200px;
+    height: 200px;
+  }
+  100% {
+    border-radius: 110px;
+    width: 240px;
+    height: 240px;
+  }
+}
