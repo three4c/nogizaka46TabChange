@@ -1,5 +1,5 @@
-# tab-test
-Github Pages :  [https://three4c.github.io/tab-test/.](https://three4c.github.io/tab-test/)
+# Nogizaka46 Tab Change
+Github Pages :  [https://three4c.github.io/nogizaka46TabChange/.](https://three4c.github.io/nogizaka46TabChange/)
 
 ## Build Setup
 ### install dependencies
